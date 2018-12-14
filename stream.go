@@ -34,9 +34,9 @@ func ThreadKill() {
 
 func main() {
 	for i := 0; i < 10; i++ {
-		go PushStream("/root/livecdn_autotest/src/media/ss.flv", "rtmp://14.17.124.21/videoqa.uplive.ks-cdn.com/live/test011")
+		go PushStream("/root/livecdn_autotest/src/media/ss.flv", "rtmp://ip/domain/live/test011")
 		time.Sleep(2 * time.Second)
-		ret := PullStream("rtmp://14.17.124.21/videoqa.rtmplive.ks-cdn.com/live/test011", 0)
+		ret := PullStream("rtmp://ip/domain/live/test011", 0)
 		if ret == 200 {
 			fmt.Println("pull stream success")
 		} else {
